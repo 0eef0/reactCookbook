@@ -1,0 +1,26 @@
+POST https://roldan-personal-recipes.herokuapp.com/api/v1/recipes
+Content-Type: application/json
+
+{
+  "recipeName": "A Cup of Air",
+  "recipeImg": "https://media.istockphoto.com/photos/empty-drinking-glass-isolated-on-white-background-picture-id1128028838?k=20&m=1128028838&s=612x612&w=0&h=wyJj28VjfCc1fFUr3exF86g-_3NOGsUsuTSi-UlC324=",
+  "recipeIngredients": [
+      {
+          "name": "Cup of Water",
+          "quantity": 1
+      }
+  ],
+  "recipeTools": [
+      {
+          "name": "Gravity",
+          "size": "Light"
+      }
+  ],
+  "recipeSteps": [
+      "Take your water cup",
+      "Rotate it downwards",
+      "Victory"
+  ]
+}
+
+###
