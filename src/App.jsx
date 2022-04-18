@@ -1,12 +1,18 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
-import { links } from "./utils/consts";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Home from './Pages/Home'
 
 const App = () => {
     return (
-        <div>
-            <h1>This is a blank template</h1>
-        </div>
+        <Router>
+            <Routes>
+                <Route index element={<Home />} />
+            </Routes>
+        </Router>
     )
 }
 
