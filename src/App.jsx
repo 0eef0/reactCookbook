@@ -4,11 +4,13 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Home from './Pages/Home'
+import Navbar from './Components/Navbar';
+import Home from './Pages/Home';
 
 const App = () => {
     return (
         <Router>
+            <Navbar />
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="/test1" element={<h1>Page 2</h1>} />

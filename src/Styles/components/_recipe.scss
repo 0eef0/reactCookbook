@@ -1,0 +1,19 @@
+div#recipes {
+    display:flex;
+    justify-content:center;
+    div.recipe{
+        width: 80%;
+        text-align:center;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        flex-wrap: wrap;
+        border: 2px solid $clr-primary;
+
+        img{
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            width: 25%;
+        }
+    }
+}

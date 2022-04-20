@@ -1,33 +1,3 @@
-/* Blues */
-/* Greens */
-/* Yellows */
-/* Misc */
-/* dark shades of primary color*/
-/* The primary/main color */
-/* lighter shades of primary color */
-/* dark shades of secondary color*/
-/* secondary color */
-/* lighter shades of secondary color */
-/* darkest grey - used for headings */
-/* grey used for paragraphs */
-/* lightest grey - used for outlines */
-/* Other Colors used */
-.menu li {
-  top: 100%;
-  left: 0;
-  position: absolute;
-}
-
-.sticky-bar {
-  top: 0;
-  left: 0;
-  position: fixed;
-}
-
-.submenu {
-  position: relative;
-}
-
 *,
 *::after,
 *::before {
@@ -82,6 +52,7 @@ blockquote,
 q {
   quotes: none;
 }
+
 blockquote::before, blockquote::after,
 q::before,
 q::after {
@@ -207,10 +178,40 @@ input[type=button] {
   clear: both;
 }
 
+/* Blues */
+/* Greens */
+/* Yellows */
+/* Misc */
+/* dark shades of primary color*/
+/* The primary/main color */
+/* lighter shades of primary color */
+/* dark shades of secondary color*/
+/* secondary color */
+/* lighter shades of secondary color */
+/* darkest grey - used for headings */
+/* grey used for paragraphs */
+/* lightest grey - used for outlines */
+/* Other Colors used */
+.menu li {
+  top: 100%;
+  left: 0;
+  position: absolute;
+}
+
+.sticky-bar {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.submenu {
+  position: relative;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #cee0f3;
-  color: #2e73b8;
+  background-color: #222;
+  color: hsl(210deg, 60%, 45%);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -258,7 +259,7 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: #577da2;
+  color: hsl(210deg, 30%, 49%);
 }
 
 @media screen and (min-width: 800px) {
@@ -289,73 +290,146 @@ h4 {
     line-height: 1;
   }
 }
-.container {
-  width: 90vw;
-  margin: 5rem 0;
-  max-width: 620px;
-  background-color: #fff;
-  border-radius: 0.25rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* Blues */
+/* Greens */
+/* Yellows */
+/* Misc */
+/* dark shades of primary color*/
+/* The primary/main color */
+/* lighter shades of primary color */
+/* dark shades of secondary color*/
+/* secondary color */
+/* lighter shades of secondary color */
+/* darkest grey - used for headings */
+/* grey used for paragraphs */
+/* lightest grey - used for outlines */
+/* Other Colors used */
+.menu li {
+  top: 100%;
+  left: 0;
+  position: absolute;
 }
-.container h3 {
-  font-weight: normal;
-  text-transform: none;
-  margin-bottom: 2rem;
+
+.sticky-bar {
+  top: 0;
+  left: 0;
+  position: fixed;
 }
-.container .buttons {
+
+.submenu {
+  position: relative;
+}
+
+div#recipes {
+  display: flex;
+  justify-content: center;
+}
+div#recipes div.recipe {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid hsl(210deg, 60%, 45%);
+}
+div#recipes div.recipe img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 25%;
+}
+
+nav#navbar {
+  position: fixed;
+  bottom: -100%;
+  left: 15%;
+  width: 70%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: hsl(210deg, 60%, 45%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem 2rem 0 0;
+  overflow: hidden;
+  border: 5px solid #222;
+  border-bottom: none;
+  transition: bottom 0.3s;
+  color: #fff;
+  z-index: 1000;
+}
+nav#navbar div {
+  position: fixed;
+  bottom: 1rem;
+  padding: 0.5rem 10vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s;
+  border-bottom: 5px solid hsl(210deg, 60%, 45%);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: hsl(210deg, 60%, 45%);
 }
-
-.section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-
-@media only screen and (min-width: 1024px) {
-  .section {
-    width: 95vw;
-  }
-}
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
+nav#navbar div img {
   height: 2rem;
-  width: 12rem;
-  border-color: transparent;
-  background: #3b85ce;
-  font-weight: 700;
-  transition: all 0.5s linear;
-  border-radius: 0.25rem;
-  color: #cee0f3;
-  margin-left: 1rem;
-  align-self: center;
-  min-width: 2rem;
 }
-.btn:hover {
-  color: #1e4a76;
-  background: #b1cfec;
+nav#navbar div h1 {
+  font-size: 2rem;
 }
-
-.loading {
+nav#navbar ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav#navbar ul li {
+  flex-grow: 1;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 200px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: inherit;
+  align-items: inherit;
+  transition: background-color 0.3s;
+}
+nav#navbar ul li a,
+nav#navbar ul li a:visited {
+  width: 100%;
+  font-size: 2rem;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
 }
-
-.underline {
-  width: 5rem;
-  height: 0.25rem;
-  margin-bottom: 1.25rem;
-  background: #3b85ce;
+nav#navbar ul li:hover {
+  background-color: rgba(34, 34, 34, 0.25);
 }
-
-.title {
-  margin-bottom: 4rem;
-  text-align: center;
+nav#navbar ul li form {
+  width: 100%;
 }
-
-/*# sourceMappingURL=main.css.map */
+nav#navbar ul li form button {
+  width: 100%;
+  background-color: transparent;
+  color: inherit;
+  font-size: 2rem;
+}
+nav#navbar:hover, nav#navbar.scrolled {
+  bottom: 0;
+}
+nav#navbar:hover div, nav#navbar.scrolled div {
+  opacity: 0;
+  z-index: -1;
+}/*# sourceMappingURL=main.css.map */

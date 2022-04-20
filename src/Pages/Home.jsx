@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Recipe from '../Components/Recipe';
 import axios from 'axios';
 
 const Home = () => {
@@ -14,37 +15,10 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <div id='recipes'>
             {
                 recipes.map(recipe => {
-                    return <div key={recipe.recipeName}>
-                        <img src={recipe.recipeImg} alt={recipe.recipeName} />
-                        <h2>{recipe.recipeName}</h2>
-                        <h3>Ingredients</h3>
-                        <ul>
-                            {
-                                recipe.recipeIngredients.map(ingredient => {
-                                    return <li>{ingredient.quantity} {ingredient.name}</li>
-                                })
-                            }
-                        </ul>
-                        <h3>Tools</h3>
-                        <ul>
-                            {
-                                recipe.recipeTools.map(tool => {
-                                    return <li>{tool.size} {tool.name.toLowerCase()}</li>
-                                })
-                            }
-                        </ul>
-                        <h3>Steps</h3>
-                        <ol>
-                            {
-                                recipe.recipeSteps.map(step => {
-                                    return <li>{step}</li>
-                                })
-                            }
-                        </ol>
-                    </div>
+                    return <Recipe recipe={recipe} key={recipe.recipeName} />
                 }) 
             }
         </div>
