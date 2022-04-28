@@ -1,0 +1,76 @@
+div.contactDiv {
+    width: 70%;
+    min-height: 70vh;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $border-shadow;
+    border: $grey-border;
+
+    &:has(div#emailForm.active) {
+        z-index: 10;
+    }
+
+    form#emailForm {
+        width: 80vw;
+        height: 70vh;
+        color: white;
+
+        *:focus {
+            outline: none;
+        }
+
+        h1 {
+            width: 100%;
+            height: 10%;
+            border-bottom: $grey-border;
+            text-align: center;
+            font-size: calc(2vw + 2vh);
+            margin: 0;
+            font-weight: bold;
+            background-color: rgba($color: black, $alpha: 0.5);
+        }
+
+        input {
+            width: 100%;
+            height: 10%;
+            border-bottom: $grey-border;
+            color: inherit;
+            padding: 1vw;
+
+            &::placeholder {
+                color: inherit;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 50%;
+            padding: 1vw;
+            color: inherit;
+            resize: none;
+            margin: 0;
+            font-family: inherit;
+            border-bottom: $grey-border;
+
+            &::placeholder {
+                color: inherit;
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 10%;
+            margin-top: -0.25rem;
+            color: inherit;
+            text-align: center;
+            background-color: rgba($color: black, $alpha: 0.5);
+            font-size: 2rem;
+            font-weight: bold;
+            &:hover {
+                background-color: rgba($color: black, $alpha: 0.25);
+            }
+        }
+    }
+}

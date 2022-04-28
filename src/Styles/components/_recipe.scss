@@ -1,19 +1,34 @@
 div#recipes {
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 1rem auto;
     div.recipe{
-        width: 80%;
+        width: 30%;
+        min-width: 250px;
         text-align:center;
-        display:flex;
-        justify-content: space-between;
-        align-items:center;
+        box-shadow: $border-shadow;
+        border: $grey-border;
+        margin-bottom: 1rem;
+        display: flex;
         flex-wrap: wrap;
-        border: 2px solid $clr-primary;
+        align-items: space-between;
+        justify-content: center;
 
         img{
             aspect-ratio: 1/1;
             object-fit: cover;
-            width: 25%;
+            width: 100%;
+        }
+        h3{
+            width: 100%;
+        }
+        a, a:visited{
+            background-color: $clr-primary;
+            color: $clr-white;
+            padding: 0.25rem 1rem;
+            border-radius: 1rem 1rem 0 0;
         }
     }
 }

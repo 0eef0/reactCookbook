@@ -1,0 +1,21 @@
+div#homePage {
+    width: 70%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div.person {
+        width: 40%;
+        min-width: 250px;
+        box-shadow: $border-shadow;
+        border: $grey-border;
+        h3{
+            span {
+                color: $clr-grey-6;
+                white-space: nowrap;
+            }
+        }
+    }
+}

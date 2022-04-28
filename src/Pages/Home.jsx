@@ -1,26 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Recipe from '../Components/Recipe';
-import axios from 'axios';
+import React from 'react';
 
 const Home = () => {
-    const [recipes, setRecipes] = useState([]);
-
-    const getRecipes = async () => {
-        const { data: { recipe } } = await axios.get('https://roldan-personal-recipes.herokuapp.com/api/v1/recipes');
-        setRecipes(recipe);
-    }
-
-    useEffect(() => {
-        getRecipes();
-    }, []);
-
     return (
-        <div id='recipes'>
-            {
-                recipes.map(recipe => {
-                    return <Recipe recipe={recipe} key={recipe.recipeName} />
-                }) 
-            }
+        <div id="homePage">
+            <div className="person">
+                <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" alt="placeholder" />
+                <h3>Person Name <span>Person Role</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla labore optio veniam qui reiciendis fugit, placeat eum debitis error temporibus!</p>
+            </div>
+            <div className="person">
+                <img src="https://www.pngitem.com/pimgs/m/421-4212617_person-placeholder-image-transparent-hd-png-download.png" alt="placeholder" />
+                <h3>Person Name <span>Person Role</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium vero quaerat reprehenderit inventore quae eveniet minima sapiente eligendi est.</p>
+            </div>
         </div>
     )
 }

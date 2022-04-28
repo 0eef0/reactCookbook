@@ -9,3 +9,6 @@ $fixed-width: 620px;
 $clr-primary: hsl(210, 60%, 45%);
 $clr-secondary: #fff;
 $dark-background: #222;
+
+$border-shadow: 5px 5px 2.5px $clr-primary;
+$grey-border: 1px solid rgba(hsl(210, 30%, 70%), 0.5);

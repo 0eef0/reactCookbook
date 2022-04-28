@@ -211,9 +211,10 @@ input[type=button] {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #222;
-  color: hsl(210deg, 60%, 45%);
+  color: #2e73b8;
   line-height: 1.5;
   font-size: 0.875rem;
+  padding-bottom: 5rem;
 }
 
 main {
@@ -259,7 +260,7 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: hsl(210deg, 30%, 49%);
+  color: #577da2;
 }
 
 @media screen and (min-width: 800px) {
@@ -320,24 +321,83 @@ h4 {
   position: relative;
 }
 
-div#recipes {
+div#homePage {
+  width: 70%;
+  margin: 1rem auto;
   display: flex;
-  justify-content: center;
-}
-div#recipes div.recipe {
-  width: 80%;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  border: 2px solid hsl(210deg, 60%, 45%);
+}
+div#homePage div.person {
+  width: 40%;
+  min-width: 250px;
+  box-shadow: 5px 5px 2.5px #2e73b8;
+  border: 1px solid rgba(156, 179, 201, 0.5);
+}
+div#homePage div.person h3 span {
+  color: #9cb3c9;
+  white-space: nowrap;
+}
+
+div#blogposts {
+  width: 70%;
+  margin: 1rem auto;
+}
+div#blogposts div.post {
+  padding: 0.5rem;
+  width: 100%;
+  box-shadow: 5px 5px 2.5px #2e73b8;
+  border: 1px solid rgba(156, 179, 201, 0.5);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+div#blogposts div.post img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  width: 50%;
+  min-width: 250px;
+}
+@media only screen and (max-width: 720px) {
+  div#blogposts div.post {
+    flex-wrap: wrap;
+  }
+}
+
+div#recipes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 1rem auto;
+}
+div#recipes div.recipe {
+  width: 30%;
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 5px 5px 2.5px #2e73b8;
+  border: 1px solid rgba(156, 179, 201, 0.5);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
 }
 div#recipes div.recipe img {
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 25%;
+  object-fit: cover;
+  width: 100%;
+}
+div#recipes div.recipe h3 {
+  width: 100%;
+}
+div#recipes div.recipe a, div#recipes div.recipe a:visited {
+  background-color: #2e73b8;
+  color: #fff;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
 nav#navbar {
@@ -345,10 +405,8 @@ nav#navbar {
   bottom: -100%;
   left: 15%;
   width: 70%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
-  background-color: hsl(210deg, 60%, 45%);
+  background-color: #2e73b8;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -364,8 +422,6 @@ nav#navbar div {
   position: fixed;
   bottom: 1rem;
   padding: 0.5rem 10vw;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   left: 50%;
   transform: translate(-50%, 0);
@@ -374,10 +430,10 @@ nav#navbar div {
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s;
-  border-bottom: 5px solid hsl(210deg, 60%, 45%);
+  border-bottom: 5px solid #2e73b8;
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.5);
-  color: hsl(210deg, 60%, 45%);
+  color: #2e73b8;
 }
 nav#navbar div img {
   height: 2rem;
@@ -395,12 +451,8 @@ nav#navbar ul {
 }
 nav#navbar ul li {
   flex-grow: 1;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   min-width: 200px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
   height: max-content;
   display: inherit;
   align-items: inherit;
@@ -432,4 +484,119 @@ nav#navbar:hover, nav#navbar.scrolled {
 nav#navbar:hover div, nav#navbar.scrolled div {
   opacity: 0;
   z-index: -1;
-}/*# sourceMappingURL=main.css.map */
+}
+
+div#heading {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+  border-bottom: 2px solid #2e73b8;
+}
+
+div#indRecipe {
+  width: 70%;
+  min-height: 70vh;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 2.5px #2e73b8;
+  border: 1px solid rgba(156, 179, 201, 0.5);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+div#indRecipe div#leftHalf, div#indRecipe div#rightHalf {
+  width: 50%;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+div#indRecipe div#leftHalf ul, div#indRecipe div#rightHalf ul {
+  list-style-type: square;
+  min-width: 150px;
+}
+div#indRecipe div#leftHalf ul li, div#indRecipe div#rightHalf ul li {
+  text-transform: lowercase;
+}
+div#indRecipe div#leftHalf ol li, div#indRecipe div#rightHalf ol li {
+  text-transform: capitalize;
+}
+div#indRecipe div#rightHalf {
+  padding-left: 2rem;
+}
+div#indRecipe img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  width: 100%;
+}
+
+div.contactDiv {
+  width: 70%;
+  min-height: 70vh;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 2.5px #2e73b8;
+  border: 1px solid rgba(156, 179, 201, 0.5);
+}
+div.contactDiv:has(div#emailForm.active) {
+  z-index: 10;
+}
+div.contactDiv form#emailForm {
+  width: 80vw;
+  height: 70vh;
+  color: white;
+}
+div.contactDiv form#emailForm *:focus {
+  outline: none;
+}
+div.contactDiv form#emailForm h1 {
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid rgba(156, 179, 201, 0.5);
+  text-align: center;
+  font-size: calc(2vw + 2vh);
+  margin: 0;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+div.contactDiv form#emailForm input {
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid rgba(156, 179, 201, 0.5);
+  color: inherit;
+  padding: 1vw;
+}
+div.contactDiv form#emailForm input::placeholder {
+  color: inherit;
+}
+div.contactDiv form#emailForm textarea {
+  width: 100%;
+  height: 50%;
+  padding: 1vw;
+  color: inherit;
+  resize: none;
+  margin: 0;
+  font-family: inherit;
+  border-bottom: 1px solid rgba(156, 179, 201, 0.5);
+}
+div.contactDiv form#emailForm textarea::placeholder {
+  color: inherit;
+}
+div.contactDiv form#emailForm button {
+  width: 100%;
+  height: 10%;
+  margin-top: -0.25rem;
+  color: inherit;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: bold;
+}
+div.contactDiv form#emailForm button:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/*# sourceMappingURL=main.css.map */

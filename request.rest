@@ -2,24 +2,34 @@ POST https://roldan-personal-recipes.herokuapp.com/api/v1/recipes
 Content-Type: application/json
 
 {
-  "recipeName": "A Cup of Air",
-  "recipeImg": "https://media.istockphoto.com/photos/empty-drinking-glass-isolated-on-white-background-picture-id1128028838?k=20&m=1128028838&s=612x612&w=0&h=wyJj28VjfCc1fFUr3exF86g-_3NOGsUsuTSi-UlC324=",
+  "recipeName": "Grilled Cheese Sandwich",
+  "recipeImg": "https://natashaskitchen.com/wp-content/uploads/2021/08/Grilled-Cheese-Sandwich-3.jpg",
   "recipeIngredients": [
       {
-          "name": "Cup of Water",
-          "quantity": 1
+          "name": "Slices of Bread",
+          "quantity": 2
+      },
+      {
+          "name": "Tbsp of Butter",
+          "quantity": 0.5
+      },
+      {
+          "name": "Cheese slices",
+          "quantity": 2
       }
   ],
   "recipeTools": [
       {
-          "name": "Gravity",
-          "size": "Light"
+          "name": "Skillet",
+          "size": "A good size"
       }
   ],
   "recipeSteps": [
-      "Take your water cup",
-      "Rotate it downwards",
-      "Victory"
+      "Butter the toast - spread 1/2 Tbsp butter on one side of each slice of bread.",
+      "Heat skillet - place a skillet over low to medium/low heat. A griddle should be at 275˚F. Immediately add 2 slices of bread with the butter-side-down.",
+      "Add cheese - stack cheeses on one of the pieces of bread, cover with the other piece of toast and flip the sandwich over.",
+      "Brown the toast - Continue sauteeing, flipping once, until both sides are golden brown and cheese is melted.",
+      "Serve - cut the sandwich in half on the diagonal to serve."
   ]
 }
 

@@ -1,0 +1,27 @@
+div#blogposts {
+    width: 70%;
+    margin: 1rem auto;
+    div.post {
+        padding: 0.5rem;
+        width: 100%;
+        box-shadow: $border-shadow;
+        border: $grey-border;
+        display: flex;
+        justify-content: space-between;
+        //flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+
+        img{
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            width: 50%;
+            min-width: 250px;
+        }
+        @media only screen and (max-width: 720px) {
+            &{
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
